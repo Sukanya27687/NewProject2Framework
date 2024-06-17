@@ -1,7 +1,10 @@
 package BrowserControl;
 
-import org.junit.After;
-import org.junit.Before;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+
 
 public class CucumberHooks extends  WebConnector{
     @Before
