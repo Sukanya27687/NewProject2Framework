@@ -8,18 +8,28 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import utilities.ConstantUtils;
 
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+
 public class WebConnector {
+
     public static WebDriver driver;
+
     public static void openBrowser(){
         if(ConstantUtils.BROWSER_NAME.equalsIgnoreCase("firefox")){
             FirefoxOptions fo= new FirefoxOptions();
             fo.addArguments("start-maximized");
+            if(ConstantUtils.BROWSER_TYPE.equalsIgnoreCase("headless")){
+                fo.addArguments("--headless");
+            }
             driver = new FirefoxDriver(fo);
         } else {
             ChromeOptions co= new ChromeOptions();
             co.addArguments("start-maximized");
+            if(ConstantUtils.BROWSER_TYPE.equalsIgnoreCase("headless")){
+                co.addArguments("--headless");
+            }
             driver = new ChromeDriver(co);
         }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
