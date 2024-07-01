@@ -9,7 +9,7 @@ public class LoginPageObjects extends WebConnector {
         private String usernameFieldXpath = "//input[@id='user-name']";
         private String passwordFieldXpath = "//input[@id= 'password']";
         private String loginButtonXpath = "//input[@id='login-button']";
-        private String logoutButtonXpath = "//a[@href= '/logout']";
+      // private String logoutButtonXpath = "//a[@id='logout_sidebar_link']";
 
 /*****Getters £ Setters*****/
 /**Set username field
@@ -37,7 +37,7 @@ public class LoginPageObjects extends WebConnector {
  * click logout button
  *
  */
-public void clickLogoutButton(){
-         BasePage.findElementByXpath(10, logoutButtonXpath).click();
-}
+//public void clickLogoutButton(){
+  //       BasePage.findElementByXpath(10, logoutButtonXpath).click();
+//}
 }

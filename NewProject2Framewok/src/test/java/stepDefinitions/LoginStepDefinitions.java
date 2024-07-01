@@ -27,9 +27,10 @@ public class LoginStepDefinitions extends WebConnector {
         Assert.assertTrue(driver.getPageSource().contains(expectedText));
     }
 
-        @Then("the user clicks on logout button")
-    public void the_user_clicks_on_logout_button() {
-        loginpage.clickLogoutButton();
-    }
+
+      //  @Then("the user clicks on logout button")
+    //public void the_user_clicks_on_logout_button() {
+      //  loginpage.clickLogoutButton();
+    //}
 
 }

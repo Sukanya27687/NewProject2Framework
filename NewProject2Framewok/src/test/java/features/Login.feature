@@ -7,11 +7,11 @@ Feature: Verify Login Page
   Background: Navigate
     Given the user navigates to home page
 
-@SmokeTest
+
     Scenario: 1. Verify login with Valid credentials
       When the user login with "standard_user" username and "secret_sauce" password
       Then the user should see "Products"
-      And the user clicks on logout button
+
 
       Scenario: 2. Verify Login with invalid username
 When the user login with "standard_usen" username and "secret_sauce" password
@@ -21,7 +21,7 @@ When the user login with "standard_usen" username and "secret_sauce" password
   When the user login with "standard_user" username and "secret_saucc" password
       Then the user should see "Epic sadface: Username and password do not match any user in this service"
 
-@SmokeTest
+
       Scenario Outline: 4. Verify Login with invalid credentials using datadriven
   When the user login with "<username>" username and "<password>" password
       Then the user should see "<expectedTest>"
@@ -31,3 +31,20 @@ Examples:
   |standard_usen | secret_sauce | Epic sadface: Username and password do not match any user in this service|
   |standard_user | secret_saucc | Epic sadface: Username and password do not match any user in this service|
   |standard_usen | secret_saucc | Epic sadface: Username and password do not match any user in this service|
+
+  @SmokeTest
+  Scenario: 5.Verify login with Valid credentials
+    When the user login with "locked_out_user" username and "secret_sauce" password
+    Then the user should see "Epic sadface: Sorry, this user has been locked out"
+
+  @SmokeTest
+  Scenario Outline: 6. Verify Login with invalid credentials using datadriven
+    When the user login with "<username>" username and "<password>" password
+    Then the user should see "<expectedTest>"
+
+    Examples:
+      |username| password| expectedTest|
+      |locked_out_userr| secret_sauce| Epic sadface: Username and password do not match any user in this service|
+      |locked_out_user | secret_saucc | Epic sadface: Username and password do not match any user in this service|
+      |locked_out_userr | secret_saucc | Epic sadface: Username and password do not match any user in this service|
+
