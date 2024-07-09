@@ -21,13 +21,13 @@ public class DropdownStepDefinitions extends WebConnector {
          dropdownPageObjects.checkNumberOfOptions(count);
     }
     @When("the user select {string} option from the dropdown")
-    public void the_user_select_option_from_the_dropdown(String dropdown) {
+    public void the_user_select_option_from_the_dropdown(String dropdown) throws InterruptedException {
         dropdownPageObjects.selectOptionFromDropdown(dropdown);
-        //Thread.sleep(3000);
+        Thread.sleep(3000);
     }
     @Then("the user should see {string} option is selected in the dropdown")
-    public void the_user_should_see_option_is_selected_in_the_dropdown(String selectdropdown){
+    public void the_user_should_see_option_is_selected_in_the_dropdown(String selectdropdown) throws InterruptedException {
         dropdownPageObjects.checkSelectedOption(selectdropdown);
-       // Thread.sleep(3000);
+       Thread.sleep(3000);
     }
 }

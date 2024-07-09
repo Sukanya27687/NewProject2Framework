@@ -11,7 +11,7 @@ import java.util.List;
 public class DropdownPageObjects extends WebConnector {
     /*****LOcators****/
     private String dropdownXpath = "//select[@class='product_sort_container']";
-    private String selectedOptionxpath = "//select[@class='select_container']";
+    private String selectedOptionxpath = "//span[@class='active_option']";
 
     /**Getters and Setter**/
 /** method to check the number of options in dropdown box
@@ -19,7 +19,7 @@ public class DropdownPageObjects extends WebConnector {
  */
 public void checkNumberOfOptions(int expectedCount){
     WebElement dropdown= BasePage.findElementByXpath(10,dropdownXpath);
-    List<WebElement> options = dropdown.findElements(By.tagName("class"));
+    List<WebElement> options = dropdown.findElements(By.tagName("option"));
     Assert.assertEquals(expectedCount, options.size());
 }
 /**
