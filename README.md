@@ -7,8 +7,9 @@ To create this project we need to know what test automation is and how this proj
 # Table of Contents:
 1. What is Test Automation?
 2. Pre-requisites
-3. Cloning the Repository
-4. Running the BDD scenarios
+3. Introduction to Cucumber
+4. What is Git and Instructions to Clone the Repository
+
 
 # What is Test Automation?
 est automation is the process of using automation tools to maintain test data, execute tests, and analyze test results to improve software quality. Test automation is also known as automation testing or automated QA testing.
