@@ -37,9 +37,9 @@ public class PurchaseProductStepDefinition extends WebConnector {
     purchaseProductPageObjects.clickContinueButton();
     Thread.sleep(3000);
     }
-    @Then("the user should see Checkout page with payment information and Clicks on {string} button")
-    public void the_user_should_see_Checkout_page_with_payment_information_and_Clicks_on_button() {
-purchaseProductPageObjects.clickFinishButton();
+    @Then("the user should see Checkout page with payment information and Clicks on Finish button")
+    public void the_user_should_see_Checkout_page_with_payment_information_and_Clicks_on_Finish_button() {
+    purchaseProductPageObjects.clickFinishButton();
     }
     @Then("the user should see {string} page.")
     public void the_user_should_see_page(String expectedText) {

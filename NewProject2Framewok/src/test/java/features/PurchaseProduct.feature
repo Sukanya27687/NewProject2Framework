@@ -13,6 +13,6 @@ Feature: As a user of swag labs
     Then the user clicks in "Cart" icon
     When the user navigates to "Your Cart" page and clicks on "Checkout" button
     Then the user should navigate to Checkout page and the user enters "Sukanya" FirstName,"Yeleti" LastName and "XXXMMM" PostalCode and clicks on Continue button
-    Then the user should see Checkout page with payment information and Clicks on "Finish" button
+    Then the user should see Checkout page with payment information and Clicks on Finish button
     Then the user should see "Checkout: Complete!" page.
 
