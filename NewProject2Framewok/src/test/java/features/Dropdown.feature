@@ -10,11 +10,11 @@ Feature: verify Drop down box
     Then the user should see "Products"
 
 
-@SmokeTest
+#@SmokeTest
   Scenario: 1. Verify the number of options in Product dropdown box
     Then the user must see the 4 options in the dropdown box
 
- @SmokeTest
+ #@SmokeTest
   Scenario Outline: 2. Verify that the user can select an option from the dropdown
     When the user select "<Option>" option from the dropdown
     Then the user should see "<Option>" option is selected in the dropdown

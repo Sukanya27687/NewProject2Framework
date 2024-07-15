@@ -7,7 +7,7 @@ Feature: Verify Login Page
   Background: Navigate
     Given the user navigates to home page
 
-@SmokeTest
+#@SmokeTest
     Scenario: 1. Verify login with Valid credentials
       When the user login with "standard_user" username and "secret_sauce" password
       Then the user should see "Products"
